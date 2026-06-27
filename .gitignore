@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Anaconda
+anaconda_projects/
+
+# VS Code
+.vscode/
+
+# Virtual Environments
+venv/
+.env
