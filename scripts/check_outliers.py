@@ -18,17 +18,19 @@ df = pd.read_csv(file_path)
 print("\n========== OUTLIER REPORT ==========\n")
 
 # -----------------------------
-# STEP 3: Select numeric columns
+# STEP 3: Detect numeric columns
 # -----------------------------
-numeric_columns = df.select_dtypes(include="number").columns
+numeric_cols = df.select_dtypes(include=['int64', 'float64']).columns
 
 # -----------------------------
-# STEP 4: Loop through columns
+# STEP 4: Outlier detection (Z-score)
 # -----------------------------
-for column in numeric_columns:
-
+for column in numeric_cols:
     mean = df[column].mean()
     std = df[column].std()
+
+    if std == 0:
+        continue
 
     lower_limit = mean - (3 * std)
     upper_limit = mean + (3 * std)
