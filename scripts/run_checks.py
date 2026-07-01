@@ -10,8 +10,19 @@ schema_path = sys.argv[2]
 
 print("\n========== FULL DATA QUALITY PIPELINE ==========\n")
 
-print("\n--- OUTLIERS ---\n")
+print("\n--- NULL CHECK ---\n")
+subprocess.run(["python", "scripts/check_nulls.py", file_path])
+
+print("\n--- OUTLIER CHECK ---\n")
 subprocess.run(["python", "scripts/check_outliers.py", file_path])
 
 print("\n--- TYPE CHECK ---\n")
 subprocess.run(["python", "scripts/check_types.py", file_path, schema_path])
+
+print("\n--- DUPLICATE CHECK ---\n")
+subprocess.run(["python", "scripts/check_duplicates.py", file_path])
+
+print("\n--- GENERATING HTML REPORT ---\n")
+subprocess.run(["python", "scripts/generate_report.py", file_path])
+
+print("\n========== ALL CHECKS COMPLETED ==========")
