@@ -66,3 +66,62 @@ SELECT
         ORDER BY price
     ) AS previous_price
 FROM automobile_cleaned;
+
+-- ===========================================
+-- Query 6
+-- Subquery
+-- Show cars priced above the average price
+-- ===========================================
+
+SELECT
+    make,
+    price
+FROM automobile_cleaned
+WHERE price >
+(
+    SELECT AVG(price)
+    FROM automobile_cleaned
+);
+
+-- ===========================================
+-- Query 7
+-- RANK()
+-- Rank cars by price within each manufacturer
+-- ===========================================
+
+SELECT
+    make,
+    price,
+    RANK() OVER (
+        PARTITION BY make
+        ORDER BY price DESC
+    ) AS price_rank
+FROM automobile_cleaned;
+
+-- ===========================================
+-- Query 8
+-- LEAD()
+-- Show the next car price
+-- ===========================================
+
+SELECT
+    make,
+    price,
+    LEAD(price) OVER (
+        ORDER BY price
+    ) AS next_price
+FROM automobile_cleaned;
+
+-- ===========================================
+-- Query 9
+-- LAG()
+-- Show the previous car price
+-- ===========================================
+
+SELECT
+    make,
+    price,
+    LAG(price) OVER (
+        ORDER BY price
+    ) AS previous_price
+FROM automobile_cleaned;
