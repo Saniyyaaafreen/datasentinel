@@ -17,3 +17,8 @@ anaconda_projects/
 # Virtual Environments
 venv/
 .env
+
+# JetBrains IDEs
+.idea/
+
+
