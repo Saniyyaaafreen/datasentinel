@@ -1,0 +1,676 @@
+{
+    "file": "data/automobile_cleaned.csv",
+    "nulls": {
+        "symboling": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "normalized_losses": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "make": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "fuel_type": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "aspiration": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "number_of_doors": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "body_style": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "drive_wheels": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "engine_location": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "wheel_base": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "length": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "width": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "height": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "curb_weight": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "engine_type": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "number_of_cylinders": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "engine_size": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "fuel_system": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "bore": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "stroke": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "compression_ratio": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "horsepower": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "peak_rpm": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "city_mpg": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "highway_mpg": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        },
+        "price": {
+            "missing_values": 0,
+            "percentage": 0.0,
+            "warning": false
+        }
+    },
+    "outliers": {
+        "symboling": {
+            "mean": 0.84,
+            "std_dev": 1.25,
+            "lower_limit": -2.92,
+            "upper_limit": 4.61,
+            "outlier_count": 0,
+            "outlier_indices": []
+        },
+        "normalized_losses": {
+            "mean": 125.19,
+            "std_dev": 33.57,
+            "lower_limit": 24.47,
+            "upper_limit": 225.91,
+            "outlier_count": 2,
+            "outlier_indices": [
+                103,
+                186
+            ]
+        },
+        "wheel_base": {
+            "mean": 98.8,
+            "std_dev": 6.07,
+            "lower_limit": 80.6,
+            "upper_limit": 117.0,
+            "outlier_count": 1,
+            "outlier_indices": [
+                70
+            ]
+        },
+        "length": {
+            "mean": 174.2,
+            "std_dev": 12.32,
+            "lower_limit": 137.23,
+            "upper_limit": 211.17,
+            "outlier_count": 0,
+            "outlier_indices": []
+        },
+        "width": {
+            "mean": 65.89,
+            "std_dev": 2.1,
+            "lower_limit": 59.58,
+            "upper_limit": 72.19,
+            "outlier_count": 0,
+            "outlier_indices": []
+        },
+        "height": {
+            "mean": 53.77,
+            "std_dev": 2.45,
+            "lower_limit": 46.42,
+            "upper_limit": 61.11,
+            "outlier_count": 0,
+            "outlier_indices": []
+        },
+        "curb_weight": {
+            "mean": 2555.67,
+            "std_dev": 517.3,
+            "lower_limit": 1003.78,
+            "upper_limit": 4107.56,
+            "outlier_count": 0,
+            "outlier_indices": []
+        },
+        "engine_size": {
+            "mean": 126.88,
+            "std_dev": 41.55,
+            "lower_limit": 2.24,
+            "upper_limit": 251.52,
+            "outlier_count": 5,
+            "outlier_indices": [
+                44,
+                45,
+                46,
+                70,
+                71
+            ]
+        },
+        "bore": {
+            "mean": 3.33,
+            "std_dev": 0.27,
+            "lower_limit": 2.53,
+            "upper_limit": 4.13,
+            "outlier_count": 0,
+            "outlier_indices": []
+        },
+        "stroke": {
+            "mean": 3.26,
+            "std_dev": 0.32,
+            "lower_limit": 2.31,
+            "upper_limit": 4.22,
+            "outlier_count": 3,
+            "outlier_indices": [
+                108,
+                110,
+                130
+            ]
+        },
+        "compression_ratio": {
+            "mean": 10.16,
+            "std_dev": 4.0,
+            "lower_limit": -1.85,
+            "upper_limit": 22.18,
+            "outlier_count": 9,
+            "outlier_indices": [
+                60,
+                154,
+                155,
+                170,
+                178,
+                180,
+                183,
+                188,
+                199
+            ]
+        },
+        "horsepower": {
+            "mean": 103.26,
+            "std_dev": 37.39,
+            "lower_limit": -8.9,
+            "upper_limit": 215.43,
+            "outlier_count": 1,
+            "outlier_indices": [
+                46
+            ]
+        },
+        "peak_rpm": {
+            "mean": 5121.39,
+            "std_dev": 479.62,
+            "lower_limit": 3682.52,
+            "upper_limit": 6560.27,
+            "outlier_count": 2,
+            "outlier_indices": [
+                161,
+                162
+            ]
+        },
+        "city_mpg": {
+            "mean": 25.18,
+            "std_dev": 6.42,
+            "lower_limit": 5.91,
+            "upper_limit": 44.45,
+            "outlier_count": 3,
+            "outlier_indices": [
+                17,
+                29,
+                87
+            ]
+        },
+        "highway_mpg": {
+            "mean": 30.69,
+            "std_dev": 6.82,
+            "lower_limit": 10.24,
+            "upper_limit": 51.13,
+            "outlier_count": 2,
+            "outlier_indices": [
+                17,
+                29
+            ]
+        },
+        "price": {
+            "mean": 13207.13,
+            "std_dev": 7947.07,
+            "lower_limit": -10634.07,
+            "upper_limit": 37048.33,
+            "outlier_count": 3,
+            "outlier_indices": [
+                15,
+                70,
+                71
+            ]
+        }
+    },
+    "types": {
+        "symboling": {
+            "status": "OK",
+            "expected": "int",
+            "actual": "int64"
+        },
+        "normalized_losses": {
+            "status": "OK",
+            "expected": "int",
+            "actual": "int64"
+        },
+        "wheel_base": {
+            "status": "OK",
+            "expected": "float",
+            "actual": "float64"
+        },
+        "length": {
+            "status": "OK",
+            "expected": "float",
+            "actual": "float64"
+        },
+        "width": {
+            "status": "OK",
+            "expected": "float",
+            "actual": "float64"
+        },
+        "height": {
+            "status": "OK",
+            "expected": "float",
+            "actual": "float64"
+        },
+        "curb_weight": {
+            "status": "OK",
+            "expected": "int",
+            "actual": "int64"
+        },
+        "engine_size": {
+            "status": "OK",
+            "expected": "int",
+            "actual": "int64"
+        },
+        "bore": {
+            "status": "OK",
+            "expected": "float",
+            "actual": "float64"
+        },
+        "stroke": {
+            "status": "OK",
+            "expected": "float",
+            "actual": "float64"
+        },
+        "compression_ratio": {
+            "status": "OK",
+            "expected": "float",
+            "actual": "float64"
+        },
+        "horsepower": {
+            "status": "OK",
+            "expected": "int",
+            "actual": "int64"
+        },
+        "peak_rpm": {
+            "status": "OK",
+            "expected": "int",
+            "actual": "int64"
+        },
+        "city_mpg": {
+            "status": "OK",
+            "expected": "int",
+            "actual": "int64"
+        },
+        "highway_mpg": {
+            "status": "OK",
+            "expected": "int",
+            "actual": "int64"
+        },
+        "price": {
+            "status": "OK",
+            "expected": "float",
+            "actual": "float64"
+        }
+    },
+    "duplicates": {
+        "total_rows": 201,
+        "exact_duplicates": 0,
+        "duplicate_indices": [],
+        "near_duplicate_count": null,
+        "near_duplicate_check": "skipped"
+    },
+    "ai_explanations": [
+        {
+            "pandas_index": 103,
+            "row_number": 104,
+            "column": "normalized_losses",
+            "value": 231,
+            "validation_reason": "normalized_losses value 231 is above the DataSentinel upper limit of 225.91",
+            "ai_explanation": "Row 104 was flagged because its normalized_losses value of 231 exceeds the DataSentinel upper limit of 225.91.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 186,
+            "row_number": 187,
+            "column": "normalized_losses",
+            "value": 256,
+            "validation_reason": "normalized_losses value 256 is above the DataSentinel upper limit of 225.91",
+            "ai_explanation": "Row 187 was flagged because its normalized_losses value of 256 exceeds the DataSentinel upper limit of 225.91.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 70,
+            "row_number": 71,
+            "column": "wheel_base",
+            "value": 120.9,
+            "validation_reason": "wheel_base value 120.9 is above the DataSentinel upper limit of 117.0",
+            "ai_explanation": "Row 71 was flagged because its wheel_base value of 120.9 is above the DataSentinel upper limit of 117.0.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 44,
+            "row_number": 45,
+            "column": "engine_size",
+            "value": 258,
+            "validation_reason": "engine_size value 258 is above the DataSentinel upper limit of 251.52",
+            "ai_explanation": "Row 45 was flagged because the engine_size value 258 is above the DataSentinel upper limit of 251.52.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 45,
+            "row_number": 46,
+            "column": "engine_size",
+            "value": 258,
+            "validation_reason": "engine_size value 258 is above the DataSentinel upper limit of 251.52",
+            "ai_explanation": "Row 46 was flagged because its engine_size value of 258 is above the DataSentinel upper limit of 251.52.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 46,
+            "row_number": 47,
+            "column": "engine_size",
+            "value": 326,
+            "validation_reason": "engine_size value 326 is above the DataSentinel upper limit of 251.52",
+            "ai_explanation": "Row 47 was flagged because its engine_size value of 326 exceeds the DataSentinel upper limit of 251.52.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 70,
+            "row_number": 71,
+            "column": "engine_size",
+            "value": 308,
+            "validation_reason": "engine_size value 308 is above the DataSentinel upper limit of 251.52",
+            "ai_explanation": "Row 71 was flagged because its engine_size value of 308 is above the DataSentinel upper limit of 251.52.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 71,
+            "row_number": 72,
+            "column": "engine_size",
+            "value": 304,
+            "validation_reason": "engine_size value 304 is above the DataSentinel upper limit of 251.52",
+            "ai_explanation": "Row 72 was flagged because its engine_size value of 304 exceeds the DataSentinel upper limit of 251.52.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 108,
+            "row_number": 109,
+            "column": "stroke",
+            "value": 2.19,
+            "validation_reason": "stroke value 2.19 is below the DataSentinel lower limit of 2.31",
+            "ai_explanation": "Row 109 was flagged because its stroke value of 2.19 is below the DataSentinel lower limit of 2.31.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 110,
+            "row_number": 111,
+            "column": "stroke",
+            "value": 2.19,
+            "validation_reason": "stroke value 2.19 is below the DataSentinel lower limit of 2.31",
+            "ai_explanation": "Row 111 was flagged because its stroke value of 2.19 is below the DataSentinel lower limit of 2.31.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 130,
+            "row_number": 131,
+            "column": "stroke",
+            "value": 2.07,
+            "validation_reason": "stroke value 2.07 is below the DataSentinel lower limit of 2.31",
+            "ai_explanation": "Row 131 was flagged because its stroke value of 2.07 is below the DataSentinel lower limit of 2.31.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 60,
+            "row_number": 61,
+            "column": "compression_ratio",
+            "value": 22.7,
+            "validation_reason": "compression_ratio value 22.7 is above the DataSentinel upper limit of 22.18",
+            "ai_explanation": "Row 61 was flagged because its compression_ratio value of 22.7 exceeds the DataSentinel upper limit of 22.18.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 154,
+            "row_number": 155,
+            "column": "compression_ratio",
+            "value": 22.5,
+            "validation_reason": "compression_ratio value 22.5 is above the DataSentinel upper limit of 22.18",
+            "ai_explanation": "Row 155 was flagged because its compression_ratio value of 22.5 is above the DataSentinel upper limit of 22.18.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 155,
+            "row_number": 156,
+            "column": "compression_ratio",
+            "value": 22.5,
+            "validation_reason": "compression_ratio value 22.5 is above the DataSentinel upper limit of 22.18",
+            "ai_explanation": "Row 156 was flagged because its compression_ratio value of 22.5 is above the DataSentinel upper limit of 22.18.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 170,
+            "row_number": 171,
+            "column": "compression_ratio",
+            "value": 22.5,
+            "validation_reason": "compression_ratio value 22.5 is above the DataSentinel upper limit of 22.18",
+            "ai_explanation": "Row 171 was flagged because its compression_ratio value of 22.5 is above the DataSentinel upper limit of 22.18.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 178,
+            "row_number": 179,
+            "column": "compression_ratio",
+            "value": 23.0,
+            "validation_reason": "compression_ratio value 23.0 is above the DataSentinel upper limit of 22.18",
+            "ai_explanation": "Row 179 was flagged because its compression_ratio value of 23.0 is above the DataSentinel upper limit of 22.18.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 180,
+            "row_number": 181,
+            "column": "compression_ratio",
+            "value": 23.0,
+            "validation_reason": "compression_ratio value 23.0 is above the DataSentinel upper limit of 22.18",
+            "ai_explanation": "Row 181 was flagged because its compression_ratio value of 23.0 is above the DataSentinel upper limit of 22.18.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 183,
+            "row_number": 184,
+            "column": "compression_ratio",
+            "value": 23.0,
+            "validation_reason": "compression_ratio value 23.0 is above the DataSentinel upper limit of 22.18",
+            "ai_explanation": "Row 184 was flagged because its compression_ratio value of 23.0 is above the DataSentinel upper limit of 22.18.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 188,
+            "row_number": 189,
+            "column": "compression_ratio",
+            "value": 23.0,
+            "validation_reason": "compression_ratio value 23.0 is above the DataSentinel upper limit of 22.18",
+            "ai_explanation": "Row 189 was flagged because its compression_ratio value of 23.0 is above the DataSentinel upper limit of 22.18.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 199,
+            "row_number": 200,
+            "column": "compression_ratio",
+            "value": 23.0,
+            "validation_reason": "compression_ratio value 23.0 is above the DataSentinel upper limit of 22.18",
+            "ai_explanation": "Row 200 was flagged because its compression_ratio value of 23.0 is above the DataSentinel upper limit of 22.18.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 46,
+            "row_number": 47,
+            "column": "horsepower",
+            "value": 262,
+            "validation_reason": "horsepower value 262 is above the DataSentinel upper limit of 215.43",
+            "ai_explanation": "Row 47 was flagged because its horsepower value of 262 exceeds the DataSentinel upper limit of 215.43.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 161,
+            "row_number": 162,
+            "column": "peak_rpm",
+            "value": 6600,
+            "validation_reason": "peak_rpm value 6600 is above the DataSentinel upper limit of 6560.27",
+            "ai_explanation": "Row 162 was flagged because its peak_rpm value of 6600 exceeds the DataSentinel upper limit of 6560.27.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 162,
+            "row_number": 163,
+            "column": "peak_rpm",
+            "value": 6600,
+            "validation_reason": "peak_rpm value 6600 is above the DataSentinel upper limit of 6560.27",
+            "ai_explanation": "Row 163 was flagged because its peak_rpm value of 6600 is above the DataSentinel upper limit of 6560.27.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 17,
+            "row_number": 18,
+            "column": "city_mpg",
+            "value": 47,
+            "validation_reason": "city_mpg value 47 is above the DataSentinel upper limit of 44.45",
+            "ai_explanation": "Row 18 was flagged because its city_mpg value of 47 exceeds DataSentinel's upper limit of 44.45.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 29,
+            "row_number": 30,
+            "column": "city_mpg",
+            "value": 49,
+            "validation_reason": "city_mpg value 49 is above the DataSentinel upper limit of 44.45",
+            "ai_explanation": "Row 30 was flagged because its city_mpg value of 49 is above the DataSentinel upper limit of 44.45.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 87,
+            "row_number": 88,
+            "column": "city_mpg",
+            "value": 45,
+            "validation_reason": "city_mpg value 45 is above the DataSentinel upper limit of 44.45",
+            "ai_explanation": "Row 88 was flagged because its city_mpg value of 45 exceeds the DataSentinel upper limit of 44.45.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 17,
+            "row_number": 18,
+            "column": "highway_mpg",
+            "value": 53,
+            "validation_reason": "highway_mpg value 53 is above the DataSentinel upper limit of 51.13",
+            "ai_explanation": "Row 18 was flagged because its highway_mpg value of 53 is above the DataSentinel upper limit of 51.13.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 29,
+            "row_number": 30,
+            "column": "highway_mpg",
+            "value": 54,
+            "validation_reason": "highway_mpg value 54 is above the DataSentinel upper limit of 51.13",
+            "ai_explanation": "Row 30 was flagged because its highway_mpg value of 54 exceeds the DataSentinel upper limit of 51.13.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 15,
+            "row_number": 16,
+            "column": "price",
+            "value": 41315.0,
+            "validation_reason": "price value 41315.0 is above the DataSentinel upper limit of 37048.33",
+            "ai_explanation": "Row 16 was flagged because its price value of 41315.0 is above the DataSentinel upper limit of 37048.33.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 70,
+            "row_number": 71,
+            "column": "price",
+            "value": 40960.0,
+            "validation_reason": "price value 40960.0 is above the DataSentinel upper limit of 37048.33",
+            "ai_explanation": "Row 71 was flagged because its price value of 40960.0 is above the DataSentinel upper limit of 37048.33.",
+            "status": "SUCCESS"
+        },
+        {
+            "pandas_index": 71,
+            "row_number": 72,
+            "column": "price",
+            "value": 45400.0,
+            "validation_reason": "price value 45400.0 is above the DataSentinel upper limit of 37048.33",
+            "ai_explanation": "Row 72 was flagged because its price value of 45400.0 is above the DataSentinel upper limit of 37048.33.",
+            "status": "SUCCESS"
+        }
+    ]
+}

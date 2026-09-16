@@ -1,27 +1,1176 @@
 
+<!DOCTYPE html>
+
 <html>
+
 <head>
-<title>Data Quality Report</title>
+
+<meta charset="UTF-8">
+
+<title>DataSentinel Data Quality Report</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f7f7f7;
+    color: #222;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+h2 {
+    margin-top: 35px;
+}
+
+.summary {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 18px;
+    min-width: 150px;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 0 0 8px 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #eeeeee;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.warning {
+    color: #b36b00;
+    font-weight: bold;
+}
+
+.ai-box {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+.ai-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.reason {
+    color: #555;
+    margin-bottom: 6px;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<h1>Data Quality Report</h1>
+<h1>DataSentinel - Data Quality Report</h1>
 
-<p><b>Total Rows:</b> 201</p>
+<p>
+<b>File:</b> data/automobile_cleaned.csv
+</p>
 
-<p><b>Null Percentage:</b> 0.00%</p>
+<p>
+<b>Generated:</b> 2026-09-16 18:34:45.493581
+</p>
 
-<p><b>Outlier Count:</b> 31</p>
 
-<p><b>Duplicate Count:</b> 0</p>
+<h2>Dataset Summary</h2>
 
-<p><b>Type Mismatches:</b> 0</p>
+<div class="summary">
 
-<hr>
+<div class="card">
+<h3>Total Rows</h3>
+<p>201</p>
+</div>
 
-<p>Generated:
-2026-07-01 18:07:35.425185</p>
+<div class="card">
+<h3>Total Columns</h3>
+<p>26</p>
+</div>
+
+<div class="card">
+<h3>Total Nulls</h3>
+<p>0</p>
+</div>
+
+<div class="card">
+<h3>Outlier Flags</h3>
+<p>31</p>
+</div>
+
+<div class="card">
+<h3>Duplicates</h3>
+<p>0</p>
+</div>
+
+<div class="card">
+<h3>Type Mismatches</h3>
+<p>0</p>
+</div>
+
+</div>
+
+
+<h2>Null Check</h2>
+
+<table>
+
+<tr>
+<th>Column</th>
+<th>Missing Values</th>
+<th>Percentage</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>symboling</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>normalized_losses</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>make</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>fuel_type</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>aspiration</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>number_of_doors</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>body_style</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>drive_wheels</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>engine_location</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>wheel_base</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>length</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>width</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>height</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>curb_weight</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>engine_type</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>number_of_cylinders</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>engine_size</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>fuel_system</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>bore</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>stroke</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>compression_ratio</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>horsepower</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>peak_rpm</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>city_mpg</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>highway_mpg</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>price</td>
+<td>0</td>
+<td>0.0%</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+
+</table>
+
+
+<h2>Outlier Check</h2>
+
+<table>
+
+<tr>
+<th>Column</th>
+<th>Outlier Count</th>
+<th>Lower Limit</th>
+<th>Upper Limit</th>
+</tr>
+
+<tr>
+<td>symboling</td>
+<td>0</td>
+<td>-2.92</td>
+<td>4.61</td>
+</tr>
+
+<tr>
+<td>normalized_losses</td>
+<td>2</td>
+<td>24.47</td>
+<td>225.91</td>
+</tr>
+
+<tr>
+<td>wheel_base</td>
+<td>1</td>
+<td>80.6</td>
+<td>117.0</td>
+</tr>
+
+<tr>
+<td>length</td>
+<td>0</td>
+<td>137.23</td>
+<td>211.17</td>
+</tr>
+
+<tr>
+<td>width</td>
+<td>0</td>
+<td>59.58</td>
+<td>72.19</td>
+</tr>
+
+<tr>
+<td>height</td>
+<td>0</td>
+<td>46.42</td>
+<td>61.11</td>
+</tr>
+
+<tr>
+<td>curb_weight</td>
+<td>0</td>
+<td>1003.78</td>
+<td>4107.56</td>
+</tr>
+
+<tr>
+<td>engine_size</td>
+<td>5</td>
+<td>2.24</td>
+<td>251.52</td>
+</tr>
+
+<tr>
+<td>bore</td>
+<td>0</td>
+<td>2.53</td>
+<td>4.13</td>
+</tr>
+
+<tr>
+<td>stroke</td>
+<td>3</td>
+<td>2.31</td>
+<td>4.22</td>
+</tr>
+
+<tr>
+<td>compression_ratio</td>
+<td>9</td>
+<td>-1.85</td>
+<td>22.18</td>
+</tr>
+
+<tr>
+<td>horsepower</td>
+<td>1</td>
+<td>-8.9</td>
+<td>215.43</td>
+</tr>
+
+<tr>
+<td>peak_rpm</td>
+<td>2</td>
+<td>3682.52</td>
+<td>6560.27</td>
+</tr>
+
+<tr>
+<td>city_mpg</td>
+<td>3</td>
+<td>5.91</td>
+<td>44.45</td>
+</tr>
+
+<tr>
+<td>highway_mpg</td>
+<td>2</td>
+<td>10.24</td>
+<td>51.13</td>
+</tr>
+
+<tr>
+<td>price</td>
+<td>3</td>
+<td>-10634.07</td>
+<td>37048.33</td>
+</tr>
+
+
+</table>
+
+
+<h2>Type Check</h2>
+
+<table>
+
+<tr>
+<th>Column</th>
+<th>Expected Type</th>
+<th>Actual Type</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>symboling</td>
+<td>int</td>
+<td>int64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>normalized_losses</td>
+<td>int</td>
+<td>int64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>wheel_base</td>
+<td>float</td>
+<td>float64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>length</td>
+<td>float</td>
+<td>float64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>width</td>
+<td>float</td>
+<td>float64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>height</td>
+<td>float</td>
+<td>float64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>curb_weight</td>
+<td>int</td>
+<td>int64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>engine_size</td>
+<td>int</td>
+<td>int64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>bore</td>
+<td>float</td>
+<td>float64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>stroke</td>
+<td>float</td>
+<td>float64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>compression_ratio</td>
+<td>float</td>
+<td>float64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>horsepower</td>
+<td>int</td>
+<td>int64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>peak_rpm</td>
+<td>int</td>
+<td>int64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>city_mpg</td>
+<td>int</td>
+<td>int64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>highway_mpg</td>
+<td>int</td>
+<td>int64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+<tr>
+<td>price</td>
+<td>float</td>
+<td>float64</td>
+<td><span class="success">OK</span></td>
+</tr>
+
+
+</table>
+
+
+<h2>Duplicate Check</h2>
+
+<p>
+Exact duplicate rows:
+<b>
+0
+</b>
+</p>
+
+
+<h2>AI Explanations</h2>
+
+<p>
+AI explanations generated successfully:
+<b>
+31
+</b>
+</p>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 104 | Column: normalized_losses | Value: 231
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+normalized_losses value 231 is above the DataSentinel upper limit of 225.91
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 104 was flagged because its normalized_losses value of 231 exceeds the DataSentinel upper limit of 225.91.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 187 | Column: normalized_losses | Value: 256
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+normalized_losses value 256 is above the DataSentinel upper limit of 225.91
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 187 was flagged because its normalized_losses value of 256 exceeds the DataSentinel upper limit of 225.91.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 71 | Column: wheel_base | Value: 120.9
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+wheel_base value 120.9 is above the DataSentinel upper limit of 117.0
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 71 was flagged because its wheel_base value of 120.9 is above the DataSentinel upper limit of 117.0.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 45 | Column: engine_size | Value: 258
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+engine_size value 258 is above the DataSentinel upper limit of 251.52
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 45 was flagged because the engine_size value 258 is above the DataSentinel upper limit of 251.52.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 46 | Column: engine_size | Value: 258
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+engine_size value 258 is above the DataSentinel upper limit of 251.52
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 46 was flagged because its engine_size value of 258 is above the DataSentinel upper limit of 251.52.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 47 | Column: engine_size | Value: 326
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+engine_size value 326 is above the DataSentinel upper limit of 251.52
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 47 was flagged because its engine_size value of 326 exceeds the DataSentinel upper limit of 251.52.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 71 | Column: engine_size | Value: 308
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+engine_size value 308 is above the DataSentinel upper limit of 251.52
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 71 was flagged because its engine_size value of 308 is above the DataSentinel upper limit of 251.52.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 72 | Column: engine_size | Value: 304
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+engine_size value 304 is above the DataSentinel upper limit of 251.52
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 72 was flagged because its engine_size value of 304 exceeds the DataSentinel upper limit of 251.52.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 109 | Column: stroke | Value: 2.19
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+stroke value 2.19 is below the DataSentinel lower limit of 2.31
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 109 was flagged because its stroke value of 2.19 is below the DataSentinel lower limit of 2.31.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 111 | Column: stroke | Value: 2.19
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+stroke value 2.19 is below the DataSentinel lower limit of 2.31
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 111 was flagged because its stroke value of 2.19 is below the DataSentinel lower limit of 2.31.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 131 | Column: stroke | Value: 2.07
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+stroke value 2.07 is below the DataSentinel lower limit of 2.31
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 131 was flagged because its stroke value of 2.07 is below the DataSentinel lower limit of 2.31.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 61 | Column: compression_ratio | Value: 22.7
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+compression_ratio value 22.7 is above the DataSentinel upper limit of 22.18
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 61 was flagged because its compression_ratio value of 22.7 exceeds the DataSentinel upper limit of 22.18.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 155 | Column: compression_ratio | Value: 22.5
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+compression_ratio value 22.5 is above the DataSentinel upper limit of 22.18
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 155 was flagged because its compression_ratio value of 22.5 is above the DataSentinel upper limit of 22.18.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 156 | Column: compression_ratio | Value: 22.5
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+compression_ratio value 22.5 is above the DataSentinel upper limit of 22.18
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 156 was flagged because its compression_ratio value of 22.5 is above the DataSentinel upper limit of 22.18.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 171 | Column: compression_ratio | Value: 22.5
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+compression_ratio value 22.5 is above the DataSentinel upper limit of 22.18
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 171 was flagged because its compression_ratio value of 22.5 is above the DataSentinel upper limit of 22.18.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 179 | Column: compression_ratio | Value: 23.0
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+compression_ratio value 23.0 is above the DataSentinel upper limit of 22.18
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 179 was flagged because its compression_ratio value of 23.0 is above the DataSentinel upper limit of 22.18.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 181 | Column: compression_ratio | Value: 23.0
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+compression_ratio value 23.0 is above the DataSentinel upper limit of 22.18
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 181 was flagged because its compression_ratio value of 23.0 is above the DataSentinel upper limit of 22.18.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 184 | Column: compression_ratio | Value: 23.0
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+compression_ratio value 23.0 is above the DataSentinel upper limit of 22.18
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 184 was flagged because its compression_ratio value of 23.0 is above the DataSentinel upper limit of 22.18.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 189 | Column: compression_ratio | Value: 23.0
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+compression_ratio value 23.0 is above the DataSentinel upper limit of 22.18
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 189 was flagged because its compression_ratio value of 23.0 is above the DataSentinel upper limit of 22.18.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 200 | Column: compression_ratio | Value: 23.0
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+compression_ratio value 23.0 is above the DataSentinel upper limit of 22.18
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 200 was flagged because its compression_ratio value of 23.0 is above the DataSentinel upper limit of 22.18.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 47 | Column: horsepower | Value: 262
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+horsepower value 262 is above the DataSentinel upper limit of 215.43
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 47 was flagged because its horsepower value of 262 exceeds the DataSentinel upper limit of 215.43.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 162 | Column: peak_rpm | Value: 6600
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+peak_rpm value 6600 is above the DataSentinel upper limit of 6560.27
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 162 was flagged because its peak_rpm value of 6600 exceeds the DataSentinel upper limit of 6560.27.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 163 | Column: peak_rpm | Value: 6600
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+peak_rpm value 6600 is above the DataSentinel upper limit of 6560.27
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 163 was flagged because its peak_rpm value of 6600 is above the DataSentinel upper limit of 6560.27.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 18 | Column: city_mpg | Value: 47
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+city_mpg value 47 is above the DataSentinel upper limit of 44.45
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 18 was flagged because its city_mpg value of 47 exceeds DataSentinel's upper limit of 44.45.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 30 | Column: city_mpg | Value: 49
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+city_mpg value 49 is above the DataSentinel upper limit of 44.45
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 30 was flagged because its city_mpg value of 49 is above the DataSentinel upper limit of 44.45.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 88 | Column: city_mpg | Value: 45
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+city_mpg value 45 is above the DataSentinel upper limit of 44.45
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 88 was flagged because its city_mpg value of 45 exceeds the DataSentinel upper limit of 44.45.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 18 | Column: highway_mpg | Value: 53
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+highway_mpg value 53 is above the DataSentinel upper limit of 51.13
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 18 was flagged because its highway_mpg value of 53 is above the DataSentinel upper limit of 51.13.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 30 | Column: highway_mpg | Value: 54
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+highway_mpg value 54 is above the DataSentinel upper limit of 51.13
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 30 was flagged because its highway_mpg value of 54 exceeds the DataSentinel upper limit of 51.13.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 16 | Column: price | Value: 41315.0
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+price value 41315.0 is above the DataSentinel upper limit of 37048.33
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 16 was flagged because its price value of 41315.0 is above the DataSentinel upper limit of 37048.33.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 71 | Column: price | Value: 40960.0
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+price value 40960.0 is above the DataSentinel upper limit of 37048.33
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 71 was flagged because its price value of 40960.0 is above the DataSentinel upper limit of 37048.33.
+</div>
+
+</div>
+
+<div class="ai-box">
+
+<div class="ai-title">
+Row 72 | Column: price | Value: 45400.0
+</div>
+
+<div class="reason">
+<b>DataSentinel validation:</b>
+price value 45400.0 is above the DataSentinel upper limit of 37048.33
+</div>
+
+<div>
+<b>AI explanation:</b>
+Row 72 was flagged because its price value of 45400.0 is above the DataSentinel upper limit of 37048.33.
+</div>
+
+</div>
+
 
 </body>
+
 </html>
