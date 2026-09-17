@@ -7,7 +7,7 @@ from check_nulls import check_nulls
 from check_outliers import check_outliers
 from check_types import check_types
 from check_duplicates import check_duplicates
-from ai_explainer import explain_flagged_row
+from ai_explainer import explain_flagged_row, generate_dataset_summary
 
 
 if len(sys.argv) != 3:
@@ -149,6 +149,65 @@ print(
     f"{len(ai_explanations)}"
 )
 
+# -------------------------
+# AI DATASET SUMMARY
+# -------------------------
+
+print("\n--- AI DATASET SUMMARY ---")
+
+total_rows = len(df)
+total_columns = len(df.columns)
+
+total_nulls = sum(
+    data["missing_values"]
+    for data in null_results.values()
+)
+
+null_columns = {
+    column: data["missing_values"]
+    for column, data in null_results.items()
+    if data["missing_values"] > 0
+}
+
+total_outliers = sum(
+    data["outlier_count"]
+    for data in outlier_results.values()
+)
+
+outlier_columns = {
+    column: data["outlier_count"]
+    for column, data in outlier_results.items()
+    if data["outlier_count"] > 0
+}
+
+type_issues = {
+    column: data
+    for column, data in type_results.items()
+    if data["status"] != "OK"
+}
+
+duplicate_count = duplicate_results["exact_duplicates"]
+
+summary_data = {
+    "total_rows": total_rows,
+    "total_columns": total_columns,
+    "total_nulls": total_nulls,
+    "null_columns": null_columns,
+    "total_outlier_flags": total_outliers,
+    "outlier_columns": outlier_columns,
+    "type_issue_count": len(type_issues),
+    "type_issues": type_issues,
+    "exact_duplicate_count": duplicate_count
+}
+
+try:
+    ai_summary = generate_dataset_summary(summary_data)
+    print("\nAI Dataset Summary:")
+    print(ai_summary)
+except Exception as e:
+    print(f"AI dataset summary failed: {e}")
+    ai_summary = None
+
 
 # -------------------------
 # Combine all results
@@ -160,7 +219,8 @@ results = {
     "outliers": outlier_results,
     "types": type_results,
     "duplicates": duplicate_results,
-    "ai_explanations": ai_explanations
+    "ai_explanations": ai_explanations,
+    "ai_summary": ai_summary
 }
 
 

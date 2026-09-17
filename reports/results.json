@@ -417,7 +417,7 @@
             "column": "wheel_base",
             "value": 120.9,
             "validation_reason": "wheel_base value 120.9 is above the DataSentinel upper limit of 117.0",
-            "ai_explanation": "Row 71 was flagged because its wheel_base value of 120.9 is above the DataSentinel upper limit of 117.0.",
+            "ai_explanation": "Row 71 was flagged because its wheel_base value of 120.9 exceeds the DataSentinel upper limit of 117.0.",
             "status": "SUCCESS"
         },
         {
@@ -426,7 +426,7 @@
             "column": "engine_size",
             "value": 258,
             "validation_reason": "engine_size value 258 is above the DataSentinel upper limit of 251.52",
-            "ai_explanation": "Row 45 was flagged because the engine_size value 258 is above the DataSentinel upper limit of 251.52.",
+            "ai_explanation": "Row 45 was flagged because its engine_size value of 258 exceeds the DataSentinel upper limit of 251.52.",
             "status": "SUCCESS"
         },
         {
@@ -435,7 +435,7 @@
             "column": "engine_size",
             "value": 258,
             "validation_reason": "engine_size value 258 is above the DataSentinel upper limit of 251.52",
-            "ai_explanation": "Row 46 was flagged because its engine_size value of 258 is above the DataSentinel upper limit of 251.52.",
+            "ai_explanation": "Row 46 was flagged because its engine_size value of 258 exceeds the DataSentinel upper limit of 251.52.",
             "status": "SUCCESS"
         },
         {
@@ -498,7 +498,7 @@
             "column": "compression_ratio",
             "value": 22.7,
             "validation_reason": "compression_ratio value 22.7 is above the DataSentinel upper limit of 22.18",
-            "ai_explanation": "Row 61 was flagged because its compression_ratio value of 22.7 exceeds the DataSentinel upper limit of 22.18.",
+            "ai_explanation": "Row 61 was flagged because its compression_ratio value of 22.7 is above the DataSentinel upper limit of 22.18.",
             "status": "SUCCESS"
         },
         {
@@ -561,7 +561,7 @@
             "column": "compression_ratio",
             "value": 23.0,
             "validation_reason": "compression_ratio value 23.0 is above the DataSentinel upper limit of 22.18",
-            "ai_explanation": "Row 189 was flagged because its compression_ratio value of 23.0 is above the DataSentinel upper limit of 22.18.",
+            "ai_explanation": "Row 189 was flagged because its compression_ratio value of 23.0 exceeds the DataSentinel upper limit of 22.18.",
             "status": "SUCCESS"
         },
         {
@@ -579,7 +579,7 @@
             "column": "horsepower",
             "value": 262,
             "validation_reason": "horsepower value 262 is above the DataSentinel upper limit of 215.43",
-            "ai_explanation": "Row 47 was flagged because its horsepower value of 262 exceeds the DataSentinel upper limit of 215.43.",
+            "ai_explanation": "Row 47 was flagged because its horsepower value of 262 is above the DataSentinel upper limit of 215.43.",
             "status": "SUCCESS"
         },
         {
@@ -606,7 +606,7 @@
             "column": "city_mpg",
             "value": 47,
             "validation_reason": "city_mpg value 47 is above the DataSentinel upper limit of 44.45",
-            "ai_explanation": "Row 18 was flagged because its city_mpg value of 47 exceeds DataSentinel's upper limit of 44.45.",
+            "ai_explanation": "Row 18 was flagged because its city_mpg value of 47 exceeds the DataSentinel upper limit of 44.45.",
             "status": "SUCCESS"
         },
         {
@@ -624,7 +624,7 @@
             "column": "city_mpg",
             "value": 45,
             "validation_reason": "city_mpg value 45 is above the DataSentinel upper limit of 44.45",
-            "ai_explanation": "Row 88 was flagged because its city_mpg value of 45 exceeds the DataSentinel upper limit of 44.45.",
+            "ai_explanation": "Row 88 was flagged because its city_mpg value of 45 is above the DataSentinel upper limit of 44.45.",
             "status": "SUCCESS"
         },
         {
@@ -633,7 +633,7 @@
             "column": "highway_mpg",
             "value": 53,
             "validation_reason": "highway_mpg value 53 is above the DataSentinel upper limit of 51.13",
-            "ai_explanation": "Row 18 was flagged because its highway_mpg value of 53 is above the DataSentinel upper limit of 51.13.",
+            "ai_explanation": "Row 18 was flagged because its highway_mpg value of 53 exceeds the DataSentinel upper limit of 51.13.",
             "status": "SUCCESS"
         },
         {
@@ -672,5 +672,6 @@
             "ai_explanation": "Row 72 was flagged because its price value of 45400.0 is above the DataSentinel upper limit of 37048.33.",
             "status": "SUCCESS"
         }
-    ]
+    ],
+    "ai_summary": "The dataset contains 201 rows and 26 columns with no missing values, no type issues, and no exact duplicates. Data quality concerns are limited to outliers: 31 outlier flags were detected across 10 columns, most notably in compression_ratio (9) and engine_size (5). All other flagged columns contained between 1 and 3 outliers each."
 }

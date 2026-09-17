@@ -72,3 +72,44 @@ Keep the explanation simple and specific.
     )
 
     return response.choices[0].message.content
+
+
+def generate_dataset_summary(summary_data):
+    """
+    Sends the overall DataSentinel validation results to DeepSeek
+    and asks for a concise natural-language dataset quality summary.
+    """
+
+    prompt = f"""
+You are a data quality analyst.
+
+DataSentinel analyzed this dataset.
+
+VALIDATION SUMMARY:
+
+{summary_data}
+
+Write a concise natural-language summary of the dataset's data quality.
+
+Rules:
+- Use ONLY the facts provided in the validation summary.
+- Do not invent causes or speculate.
+- Mention only issue categories that are actually present.
+- Include exact counts and percentages when provided.
+- Mention categories with zero issues briefly when useful.
+- Keep the summary to 2-4 sentences.
+- Make it simple and professional.
+"""
+
+    response = client.chat.completions.create(
+        model="deepseek-chat",
+        messages=[
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        max_tokens=200
+    )
+
+    return response.choices[0].message.content

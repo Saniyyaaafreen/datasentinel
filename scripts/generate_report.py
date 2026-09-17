@@ -93,6 +93,11 @@ successful_ai = sum(
     if item.get("status") == "SUCCESS"
 )
 
+ai_summary = results.get(
+    "ai_summary",
+    "No AI dataset summary available."
+)
+
 
 # -------------------------
 # Read row count from
@@ -289,7 +294,7 @@ for column, data in null_results.items():
 """
 
 
-html += """
+html +="""
 
 </table>
 
@@ -357,7 +362,7 @@ for column, data in type_results.items():
 """
 
 
-html += """
+html += f"""
 
 </table>
 
@@ -371,6 +376,12 @@ Exact duplicate rows:
 </b>
 </p>
 
+<h2>AI Summary</h2>
+
+<div class="ai-box">
+    <div class="ai-title">Dataset-level AI Summary</div>
+   <p>""" + str(ai_summary) + """</p>
+</div>
 
 <h2>AI Explanations</h2>
 
