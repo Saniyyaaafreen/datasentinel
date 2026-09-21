@@ -21,4 +21,5 @@ venv/
 # JetBrains IDEs
 .idea/
 
-
+# Run Checks Backup
+scripts/run_checks_day9_backup.py

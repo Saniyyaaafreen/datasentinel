@@ -1,0 +1,18 @@
+{
+  "symboling": "int",
+  "normalized_losses": "int",
+  "wheel_base": "float",
+  "length": "float",
+  "width": "float",
+  "height": "float",
+  "curb_weight": "int",
+  "engine_size": "int",
+  "bore": "float",
+  "stroke": "float",
+  "compression_ratio": "float",
+  "horsepower": "int",
+  "peak_rpm": "int",
+  "city_mpg": "int",
+  "highway_mpg": "int",
+  "price": "float"
+}
