@@ -121,3 +121,11 @@ open reports/data_quality_report.html
 ## Author
 
 **Saniyya Aafreen G P**
+
+---
+
+## Demo
+
+A 36-second terminal demo showing the DataSentinel CLI, validation pipeline, and optional AI layer.
+
+[▶️ Watch the DataSentinel Day 10 CLI Demo](demo/DATASENTINEL-DAY-10.mov)

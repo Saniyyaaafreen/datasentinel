@@ -426,7 +426,7 @@
             "column": "engine_size",
             "value": 258,
             "validation_reason": "engine_size value 258 is above the DataSentinel upper limit of 251.52",
-            "ai_explanation": "Row 45 was flagged because its engine_size value of 258 exceeds the DataSentinel upper limit of 251.52.",
+            "ai_explanation": "Row 45 was flagged because its engine_size value of 258 is above the DataSentinel upper limit of 251.52.",
             "status": "SUCCESS"
         },
         {
@@ -444,7 +444,7 @@
             "column": "engine_size",
             "value": 326,
             "validation_reason": "engine_size value 326 is above the DataSentinel upper limit of 251.52",
-            "ai_explanation": "Row 47 was flagged because its engine_size value of 326 is above the DataSentinel upper limit of 251.52.",
+            "ai_explanation": "Row 47 was flagged because the engine_size value 326 is above the DataSentinel upper limit of 251.52.",
             "status": "SUCCESS"
         },
         {
@@ -561,7 +561,7 @@
             "column": "compression_ratio",
             "value": 23.0,
             "validation_reason": "compression_ratio value 23.0 is above the DataSentinel upper limit of 22.18",
-            "ai_explanation": "Row 189 was flagged because its compression_ratio value of 23.0 exceeds the DataSentinel upper limit of 22.18.",
+            "ai_explanation": "Row 189 was flagged because its compression_ratio value of 23.0 is above the DataSentinel upper limit of 22.18.",
             "status": "SUCCESS"
         },
         {
@@ -570,7 +570,7 @@
             "column": "compression_ratio",
             "value": 23.0,
             "validation_reason": "compression_ratio value 23.0 is above the DataSentinel upper limit of 22.18",
-            "ai_explanation": "Row 200 was flagged because its compression_ratio value of 23.0 exceeds the DataSentinel upper limit of 22.18.",
+            "ai_explanation": "Row 200 was flagged because its compression_ratio value of 23.0 is above the DataSentinel upper limit of 22.18.",
             "status": "SUCCESS"
         },
         {
@@ -606,7 +606,7 @@
             "column": "city_mpg",
             "value": 47,
             "validation_reason": "city_mpg value 47 is above the DataSentinel upper limit of 44.45",
-            "ai_explanation": "Row 18 was flagged because its city_mpg value of 47 exceeds the DataSentinel upper limit of 44.45.",
+            "ai_explanation": "Row 18 was flagged because its city_mpg value of 47 is above the DataSentinel upper limit of 44.45.",
             "status": "SUCCESS"
         },
         {
@@ -615,7 +615,7 @@
             "column": "city_mpg",
             "value": 49,
             "validation_reason": "city_mpg value 49 is above the DataSentinel upper limit of 44.45",
-            "ai_explanation": "Row 30 was flagged because its city_mpg value of 49 exceeds the DataSentinel upper limit of 44.45.",
+            "ai_explanation": "Row 30 was flagged because its city_mpg value of 49 is above the DataSentinel upper limit of 44.45.",
             "status": "SUCCESS"
         },
         {
@@ -624,7 +624,7 @@
             "column": "city_mpg",
             "value": 45,
             "validation_reason": "city_mpg value 45 is above the DataSentinel upper limit of 44.45",
-            "ai_explanation": "Row 88 was flagged because its city_mpg value of 45 exceeds the DataSentinel upper limit of 44.45.",
+            "ai_explanation": "Row 88 was flagged because its city_mpg value of 45 is above the DataSentinel upper limit of 44.45.",
             "status": "SUCCESS"
         },
         {
@@ -633,7 +633,7 @@
             "column": "highway_mpg",
             "value": 53,
             "validation_reason": "highway_mpg value 53 is above the DataSentinel upper limit of 51.13",
-            "ai_explanation": "Row 18 was flagged because its highway_mpg value of 53 is above the DataSentinel upper limit of 51.13.",
+            "ai_explanation": "Row 18 was flagged because its highway_mpg value of 53 exceeds the DataSentinel upper limit of 51.13.",
             "status": "SUCCESS"
         },
         {
@@ -642,7 +642,7 @@
             "column": "highway_mpg",
             "value": 54,
             "validation_reason": "highway_mpg value 54 is above the DataSentinel upper limit of 51.13",
-            "ai_explanation": "Row 30 was flagged because its highway_mpg value of 54 exceeds the DataSentinel upper limit of 51.13.",
+            "ai_explanation": "Row 30 was flagged because its highway_mpg value of 54 is above the DataSentinel upper limit of 51.13.",
             "status": "SUCCESS"
         },
         {
@@ -660,7 +660,7 @@
             "column": "price",
             "value": 40960.0,
             "validation_reason": "price value 40960.0 is above the DataSentinel upper limit of 37048.33",
-            "ai_explanation": "Row 71 was flagged because its price value of 40960.0 exceeds the DataSentinel upper limit of 37048.33.",
+            "ai_explanation": "Row 71 was flagged because its price value of 40960.0 is above the DataSentinel upper limit of 37048.33.",
             "status": "SUCCESS"
         },
         {
@@ -673,5 +673,5 @@
             "status": "SUCCESS"
         }
     ],
-    "ai_summary": "The dataset contains 201 rows and 26 columns with no missing values, no type issues, and no exact duplicates. A total of 31 outlier flags were identified across 10 columns, most notably in compression_ratio (9), engine_size (5), stroke (3), city_mpg (3), and price (3). All other flagged columns had 1\u20132 outliers each."
+    "ai_summary": "The dataset contains 201 rows and 26 columns with no missing values and no duplicate rows, and all columns passed type validation. DataSentinel flagged 31 total outliers across 10 columns, most notably in compression_ratio (9), engine_size (5), and stroke (3), with the remaining flagged columns each containing 1\u20133 outliers. Overall, the data is structurally complete with no null, type, or duplication issues, though the presence of these outlier flags may warrant review before analysis."
 }
