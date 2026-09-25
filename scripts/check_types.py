@@ -30,7 +30,9 @@ def check_types(file_path, schema_path):
                 "float" in actual or "int" in actual
             )) or
             (expected == "string" and (
-                "object" in actual or "string" in actual
+                "object" in actual or
+                "string" in actual or
+                "str" in actual
             ))
         )
 
