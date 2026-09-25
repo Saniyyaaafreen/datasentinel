@@ -29,7 +29,9 @@ def check_types(file_path, schema_path):
             (expected == "float" and (
                 "float" in actual or "int" in actual
             )) or
-            (expected == "string" and "object" in actual)
+            (expected == "string" and (
+                "object" in actual or "string" in actual
+            ))
         )
 
         if ok:
