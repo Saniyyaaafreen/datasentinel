@@ -2,6 +2,9 @@
 
 A Python-based Data Quality Validation Toolkit that performs automated data quality checks on CSV datasets.
 
+![Tests Passing](https://github.com/Saniyyaaafreen/datasentinel/actions/workflows/test.yml/badge.svg)
+
+
 ## Features
 
 - Detects missing values
