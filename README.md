@@ -132,3 +132,9 @@ open reports/data_quality_report.html
 A 36-second terminal demo showing the DataSentinel CLI, validation pipeline, and optional AI layer.
 
 [▶️ Watch the DataSentinel Day 10 CLI Demo](demo/DATASENTINEL-DAY-10.mov)
+
+### SDK Event Log Demo
+
+A synthetic mobile game SDK event-log case study demonstrating DataSentinel's data-quality validation, SDK-specific checks, AI explanations, and generated reports.
+
+[📄 Read the DataSentinel SDK Event Log Demo](docs/DEMO.md)

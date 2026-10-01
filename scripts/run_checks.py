@@ -6,6 +6,7 @@ from check_nulls import check_nulls
 from check_outliers import check_outliers
 from check_types import check_types
 from check_duplicates import check_duplicates
+from check_sdk_events import check_sdk_events
 
 
 def run_pipeline(file_path, schema_path, output_folder, ai_enabled=False):
@@ -64,6 +65,17 @@ def run_pipeline(file_path, schema_path, output_folder, ai_enabled=False):
     print("--- DUPLICATE CHECK ---")
     duplicate_results = check_duplicates(file_path)
     print("Duplicate check completed.\n")
+
+
+    # --------------------------------
+    # SDK EVENT VALIDATION
+    # --------------------------------
+
+    print("--- SDK EVENT VALIDATION ---")
+
+    sdk_event_results = check_sdk_events(file_path)
+
+    print("SDK event validation completed.\n")
 
     # --------------------------------
     # AI LAYER
@@ -155,7 +167,84 @@ def run_pipeline(file_path, schema_path, output_folder, ai_enabled=False):
                             "status": "ERROR"
                         }
                     )
+        # --------------------------------
+        # SDK EVENT AI EXPLANATIONS
+        # --------------------------------
 
+        sdk_rules = [
+            (
+                "negative_revenue",
+                "revenue_usd",
+                "negative revenue"
+            ),
+            (
+                "future_timestamps",
+                "timestamp",
+                "future timestamp"
+            ),
+            (
+                "impossible_timestamps",
+                "timestamp",
+                "impossible timestamp"
+            )
+        ]
+
+        for validation_key, column, issue_name in sdk_rules:
+            data = sdk_event_results[validation_key]
+
+            for pandas_index in data["indices"]:
+                row = df.iloc[pandas_index].to_dict()
+                value = row[column]
+                row_number = pandas_index + 1
+
+                reason = (
+                    f"{column} value {value} was flagged as "
+                    f"{issue_name} by DataSentinel."
+                )
+
+                print(
+                    f"Generating explanation for "
+                    f"row {row_number}, column '{column}' "
+                    f"({issue_name})..."
+                )
+
+                try:
+                    explanation = explain_flagged_row(
+                        row_dict=row,
+                        row_index=row_number,
+                        flag_reason=reason
+                    )
+
+                    ai_explanations.append(
+                        {
+                            "pandas_index": int(pandas_index),
+                            "row_number": int(row_number),
+                            "column": column,
+                            "value": value,
+                            "validation_reason": reason,
+                            "ai_explanation": explanation,
+                            "status": "SUCCESS"
+                        }
+                    )
+
+                except Exception as e:
+                    print(
+                        f"AI explanation failed for "
+                        f"row {row_number}, "
+                        f"column '{column}': {e}"
+                    )
+
+                    ai_explanations.append(
+                        {
+                            "pandas_index": int(pandas_index),
+                            "row_number": int(row_number),
+                            "column": column,
+                            "value": value,
+                            "validation_reason": reason,
+                            "ai_explanation": None,
+                            "status": "ERROR"
+                        }
+                    )
         print(
             f"\nAI explanations generated: "
             f"{len(ai_explanations)}"
@@ -209,7 +298,8 @@ def run_pipeline(file_path, schema_path, output_folder, ai_enabled=False):
             "outlier_columns": outlier_columns,
             "type_issue_count": len(type_issues),
             "type_issues": type_issues,
-            "exact_duplicate_count": duplicate_count
+            "exact_duplicate_count": duplicate_count,
+            "sdk_event_validation": sdk_event_results
         }
 
         try:
@@ -240,6 +330,7 @@ def run_pipeline(file_path, schema_path, output_folder, ai_enabled=False):
         "types": type_results,
         "duplicates": duplicate_results,
         "ai_explanations": ai_explanations,
+        "sdk_event_validation": sdk_event_results,
         "ai_summary": ai_summary
     }
 

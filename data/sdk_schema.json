@@ -1,0 +1,8 @@
+{
+  "user_id": "string",
+  "event_name": "string",
+  "timestamp": "string",
+  "session_id": "string",
+  "platform": "string",
+  "revenue_usd": "float"
+}
